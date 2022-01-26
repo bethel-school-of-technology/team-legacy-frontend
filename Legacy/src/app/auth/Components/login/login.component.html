@@ -1,0 +1,26 @@
+<div id="login">
+    <div class="container flex-container">
+        <form class="flex">
+            <div id="heading">
+                <h1>Login</h1>
+                <!-- <h3 *ngIf="invalidLogin">Invalid username and/or password.</h3> -->
+            </div>
+            <div>
+                <div class="form-container"></div>
+                <label for="Username"></label>
+                <input class="form-input" name="Username" type="email" placeholder="Username">
+            </div>
+            <div class="form-container">
+                <label for="Password"></label>
+                <input class="form-input" name="Password"  type="password" placeholder="Password">
+            </div>
+            <div class="flex-button">
+                <button class="form-button btn-primary btn:hover" >Login</button>
+                <button class="form-button btn-primary btn:hover" (click)="goToSignUp()">Sign Up</button>
+            </div>
+
+
+
+        </form>
+    </div>
+</div>
