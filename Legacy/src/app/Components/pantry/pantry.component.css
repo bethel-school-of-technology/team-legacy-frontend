@@ -1,0 +1,18 @@
+.pantry {
+  padding: 4px 0px;
+  padding-top: 4px;
+  padding-right: 0px;
+  padding-bottom: 4px;
+  padding-left: 0px;
+}
+
+.Lookup {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  min-width: 150px;
+  height: 100%;
+  margin-right: 16px;
+  position: relative
+}

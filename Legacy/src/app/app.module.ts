@@ -17,7 +17,6 @@ import { PreferencesComponent } from './Components/preferences/preferences.compo
     LoginComponent,
     SignUpComponent,
     LandingComponent,
-    // AuthModule,
     NavBarComponent,
     PantryComponent,
     RecipesComponent,
