@@ -11,6 +11,14 @@ import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
 import { PantryComponent } from './pantry/pantry.component';
 import { RecipesComponent } from './recipes/recipes.component';
 import { PreferencesComponent } from './Components/preferences/preferences.component';
+import { ProtienComponent } from './FGC/protien/protien.component';
+import { DairyComponent } from './FGC/dairy/dairy.component';
+import { VegetablesComponent } from './FGC/vegetables/vegetables.component';
+import { SpicesComponent } from './FGC/spices/spices.component';
+import { FruitsComponent } from './FGC/fruits/fruits.component';
+import { GrainsComponent } from './FGC/grains/grains.component';
+import { CannedGoodsComponent } from './FGC/canned-goods/canned-goods.component';
+import { CondimentsComponent } from './FGC/condiments/condiments.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +28,15 @@ import { PreferencesComponent } from './Components/preferences/preferences.compo
     NavBarComponent,
     PantryComponent,
     RecipesComponent,
-    PreferencesComponent
+    PreferencesComponent,
+    ProtienComponent,
+    DairyComponent,
+    VegetablesComponent,
+    SpicesComponent,
+    FruitsComponent,
+    GrainsComponent,
+    CannedGoodsComponent,
+    CondimentsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,24 @@
 <h1 class="pantry">Pantry</h1>
 <input class="Lookup" type="search" aria-label="search" placeholder="Search">
-<!-- To Do: - Create cards with links to appropriate food group component, with label and image.
+<mat-grid-list cols="2" rowHeight="1">
+    <mat-grid-tile (click)="goToProtien()" >Protien</mat-grid-tile>
+    <mat-grid-tile>Dairy</mat-grid-tile>
+    <mat-grid-tile>Fruits</mat-grid-tile>
+    <mat-grid-tile>Vegetables</mat-grid-tile>
+    <mat-grid-tile>Grains</mat-grid-tile>
+    <mat-grid-tile>Spices</mat-grid-tile>
+    <mat-grid-tile>Condiments</mat-grid-tile>
+  </mat-grid-list>
+<!-- To Do: - Connect search bar to array of all items in the Db to display when searched and added to LS when clicked (Backlog: add autofill)
+            - create a grid with images that link to appropriate food group component, with label and image.
             - Create button linked to LS or DB submitting all selected options within seperate food group components, add appropriate alerts for user.
             - Make a service to retrieve items saved to LS from Food Group Components and submit to DB to display appropriate recipes on recipes component
             -(Food Group Components)create ul of options with radio buttons for each option within the specific food group (Delete method is unselecting and removing from LS array after clicking DONE?)
             -(Food Group Components)create DONE button to submit items to LS   -->
+    <!-- Questions: - will we submit the ingredients from the ul in each food group to an array in the LS and loop through to match an array on the back end foor each recipe?
+    We would somehow need to match. Maybe an array of specific ingredients for each recipe?
+                    - -->
+ <!-- Research: - Clickable Grid icons
+                - Radio button ul w/routing
+                - how to connect Angular login and sign up page to the back end
+                - how to connect Angular search bar to the back end -->
