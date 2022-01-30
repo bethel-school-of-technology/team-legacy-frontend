@@ -8,6 +8,8 @@ import { SignUpComponent } from './Components/sign-up/sign-up.component';
 import { LandingComponent } from './Components/landing/landing.component';
 // import { AuthModule } from './auth/auth.module';
 import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
+import { PantryComponent } from './Components/pantry/pantry.component';
+import { PantryCategoryComponent } from './Components/pantry/pantry-category/pantry-category.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +17,9 @@ import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
     SignUpComponent,
     LandingComponent,
     // AuthModule,
-    NavBarComponent
+    NavBarComponent,
+    PantryComponent,
+    PantryCategoryComponent
   ],
   imports: [
     BrowserModule,
