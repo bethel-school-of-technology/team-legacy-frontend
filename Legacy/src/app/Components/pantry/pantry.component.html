@@ -1,3 +1,17 @@
+<!-- To Do: - Connect search bar to array of all items in the Db to display when searched and added to LS when clicked (Backlog: add autofill)
+            - create a grid with images that link to appropriate food group component, with label and image.
+            - Create button linked to LS or DB submitting all selected options within seperate food group components, add appropriate alerts for user.
+            - Make a service to retrieve items saved to LS from Food Group Components and submit to DB to display appropriate recipes on recipes component
+            -(Food Group Components)create ul of options with radio buttons for each option within the specific food group (Delete method is unselecting and removing from LS array after clicking DONE?)
+            -(Food Group Components)create DONE button to submit items to LS and routes back to Pantry component   -->
+<!-- Questions: - will we submit the ingredients from the ul in each food group to an array in the LS and loop through to match an array on the back end for each recipe?
+    We would somehow need to match. Maybe an array of specific ingredients for each recipe?
+                    - -->
+<!-- Research: - Clickable Grid icons
+                - Radio button ul w/routing
+                - how to connect Angular login and sign up page to the back end
+                - how to connect Angular search bar to the back end
+                - Data bind with array in service or model ID #s for FGC selection lists -->
 <h1 class="pantry">Pantry</h1>
 <input class="Lookup" type="search" aria-label="search" placeholder="Search">
 
@@ -43,20 +57,5 @@
     <p>Condiments</p>
   </div>
 </div>
+<button onclick="goToRecipes()">Lets Get Cookin!</button>
 
-
-
-<!-- To Do: - Connect search bar to array of all items in the Db to display when searched and added to LS when clicked (Backlog: add autofill)
-            - create a grid with images that link to appropriate food group component, with label and image.
-            - Create button linked to LS or DB submitting all selected options within seperate food group components, add appropriate alerts for user.
-            - Make a service to retrieve items saved to LS from Food Group Components and submit to DB to display appropriate recipes on recipes component
-            -(Food Group Components)create ul of options with radio buttons for each option within the specific food group (Delete method is unselecting and removing from LS array after clicking DONE?)
-            -(Food Group Components)create DONE button to submit items to LS and routes back to Pantry component   -->
-<!-- Questions: - will we submit the ingredients from the ul in each food group to an array in the LS and loop through to match an array on the back end for each recipe?
-    We would somehow need to match. Maybe an array of specific ingredients for each recipe?
-                    - -->
-<!-- Research: - Clickable Grid icons
-                - Radio button ul w/routing
-                - how to connect Angular login and sign up page to the back end
-                - how to connect Angular search bar to the back end
-                - Data bind with array in service or model ID #s for FGC selection lists -->

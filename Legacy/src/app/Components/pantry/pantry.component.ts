@@ -34,7 +34,11 @@ export class PantryComponent implements OnInit {
     this.router.navigate(['./spices.component.html']);
   }
   goToVegetables() {
-    this.router.navigate(['./vegetables.component.html']);    
-}
+    this.router.navigate(['./vegetables.component.html']);
+  }
+  goToRecipes() {
+    this.router.navigate(['./recipes.component.html'])
+    // Add functionality to submit array or selected items to Db
+  }
 
 }
