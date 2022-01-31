@@ -1,24 +1,62 @@
 <h1 class="pantry">Pantry</h1>
 <input class="Lookup" type="search" aria-label="search" placeholder="Search">
-<mat-grid-list cols="2" rowHeight="1">
-    <mat-grid-tile (click)="goToProtien()" >Protien</mat-grid-tile>
-    <mat-grid-tile>Dairy</mat-grid-tile>
-    <mat-grid-tile>Fruits</mat-grid-tile>
-    <mat-grid-tile>Vegetables</mat-grid-tile>
-    <mat-grid-tile>Grains</mat-grid-tile>
-    <mat-grid-tile>Spices</mat-grid-tile>
-    <mat-grid-tile>Condiments</mat-grid-tile>
-  </mat-grid-list>
+
+<div class="row">
+  <div class="column">
+    <button type="button" onclick="goToProtien()"><img src="assets/protien.png" height="20" width="20" /></button>
+    <p>Protien</p>
+  </div>
+  <div class="column">
+    <button type="button" onclick="goToDairy()"><img src="assets/milk.png" height="20" width="20" /></button>
+    <p>Dairy</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+    <button type="button" onclick="goToVegetables()"><img src="assets/vegetables.png" height="20" width="20" /></button>
+    <p>Vegetables</p>
+  </div>
+  <div class="column">
+    <button type="button" onclick="goToFruits()"><img src="assets/fruit.png" height="20" width="20" /></button>
+    <p>Fruits</p>
+  </div>
+</div> 
+<div class="row">
+  <div class="column">
+    <button type="button" onclick="goToGrains()"><img src="assets/wheat-sack.png" height="20" width="20" /></button>
+    <p>Grains</p>
+  </div>
+  <div class="column">
+    <button type="button" onclick="goToCannedGoods()"><img src="assets/canned-food.png" height="20" width="20" /></button>
+    <p>Canned Goods</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+    <button type="button" onclick="goToSpices()"><img src="assets/spice.png" height="20" width="20" /></button>
+    <p>Spices</p>
+  </div>
+  <div class="column">
+    <button type="button" onclick="goToCondiments()"><img src="assets/condiments.png" height="20" width="20" /></button>
+    <p>Condiments</p>
+  </div>
+</div>
+
+
+
 <!-- To Do: - Connect search bar to array of all items in the Db to display when searched and added to LS when clicked (Backlog: add autofill)
             - create a grid with images that link to appropriate food group component, with label and image.
             - Create button linked to LS or DB submitting all selected options within seperate food group components, add appropriate alerts for user.
             - Make a service to retrieve items saved to LS from Food Group Components and submit to DB to display appropriate recipes on recipes component
             -(Food Group Components)create ul of options with radio buttons for each option within the specific food group (Delete method is unselecting and removing from LS array after clicking DONE?)
-            -(Food Group Components)create DONE button to submit items to LS   -->
-    <!-- Questions: - will we submit the ingredients from the ul in each food group to an array in the LS and loop through to match an array on the back end foor each recipe?
+            -(Food Group Components)create DONE button to submit items to LS and routes back to Pantry component   -->
+<!-- Questions: - will we submit the ingredients from the ul in each food group to an array in the LS and loop through to match an array on the back end for each recipe?
     We would somehow need to match. Maybe an array of specific ingredients for each recipe?
                     - -->
- <!-- Research: - Clickable Grid icons
+<!-- Research: - Clickable Grid icons
                 - Radio button ul w/routing
                 - how to connect Angular login and sign up page to the back end
-                - how to connect Angular search bar to the back end -->
+                - how to connect Angular search bar to the back end
+                - Data bind with array in service or model ID #s for FGC selection lists -->
