@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { Console } from 'console';
 
 @Component({
   selector: 'app-canned-goods',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./canned-goods.component.css']
 })
 export class CannedGoodsComponent implements OnInit {
+// foodsFormGroup: FormGroup ;
+// canGood: FormControl = new FormControl();
 
-  constructor() { }
+  constructor(private fb:FormBuilder) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+//   save(): void {
+// let radioValue = this.foodsFormGroup.get('canGood').value;
+//  Console.log(radioValue); }
+
   }
-
-}
