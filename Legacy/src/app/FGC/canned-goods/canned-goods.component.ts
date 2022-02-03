@@ -1,6 +1,9 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
-import { Console } from 'console';
+import { Router } from '@angular/router';
+
+import { LocalStorageService } from 'src/app/Services/local-storage.service';
 
 @Component({
   selector: 'app-canned-goods',
@@ -8,15 +11,15 @@ import { Console } from 'console';
   styleUrls: ['./canned-goods.component.css']
 })
 export class CannedGoodsComponent implements OnInit {
-// foodsFormGroup: FormGroup ;
-// canGood: FormControl = new FormControl();
+  // newCanned: Canned[] = [];
 
-  constructor(private fb:FormBuilder) { }
+  constructor(private router: Router, private localStorageService: LocalStorageService, private http: HttpClient) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
-//   save(): void {
-// let radioValue = this.foodsFormGroup.get('canGood').value;
-//  Console.log(radioValue); }
+  foodInCan() {
+    // this.localStorageService.foodInCan(this.newCanned);
+
 
   }
+}

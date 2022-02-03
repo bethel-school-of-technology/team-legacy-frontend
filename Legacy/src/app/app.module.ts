@@ -20,6 +20,10 @@ import { GrainsComponent } from './FGC/grains/grains.component';
 import { CannedGoodsComponent } from './FGC/canned-goods/canned-goods.component';
 import { CondimentsComponent } from './FGC/condiments/condiments.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,11 +42,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     GrainsComponent,
     CannedGoodsComponent,
     CondimentsComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
