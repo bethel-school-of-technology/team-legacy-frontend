@@ -17,6 +17,9 @@ export class LoginComponent implements OnInit {
   goToSignUp() {
     this.router.navigate(['./sign-up.component.html']);    
   }
+  goToRecipes(){
+    this.router.navigate(['./recipes.component.html'])
+  }
 
 
 }

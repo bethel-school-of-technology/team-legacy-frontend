@@ -8,18 +8,48 @@ import { SignUpComponent } from './Components/sign-up/sign-up.component';
 import { LandingComponent } from './Components/landing/landing.component';
 // import { AuthModule } from './auth/auth.module';
 import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
+import { PantryComponent } from './Components/pantry/pantry.component';
+import { RecipesComponent } from './Components/recipes/recipes.component';
+import { PreferencesComponent } from './Components/preferences/preferences.component';
+import { ProtienComponent } from './FGC/protien/protien.component';
+import { DairyComponent } from './FGC/dairy/dairy.component';
+import { VegetablesComponent } from './FGC/vegetables/vegetables.component';
+import { SpicesComponent } from './FGC/spices/spices.component';
+import { FruitsComponent } from './FGC/fruits/fruits.component';
+import { GrainsComponent } from './FGC/grains/grains.component';
+import { CannedGoodsComponent } from './FGC/canned-goods/canned-goods.component';
+import { CondimentsComponent } from './FGC/condiments/condiments.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignUpComponent,
     LandingComponent,
-    // AuthModule,
-    NavBarComponent
+    NavBarComponent,
+    PantryComponent,
+    RecipesComponent,
+    PreferencesComponent,
+    ProtienComponent,
+    DairyComponent,
+    VegetablesComponent,
+    SpicesComponent,
+    FruitsComponent,
+    GrainsComponent,
+    CannedGoodsComponent,
+    CondimentsComponent
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
