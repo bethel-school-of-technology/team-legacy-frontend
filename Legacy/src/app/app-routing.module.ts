@@ -7,6 +7,8 @@ import { PantryComponent } from './Components/pantry/pantry.component';
 import { PreferencesComponent } from './Components/preferences/preferences.component';
 import { RecipesComponent } from './Components/recipes/recipes.component';
 import { SignUpComponent } from './Components/sign-up/sign-up.component';
+import { CanActivate } from '@angular/router';
+import { AuthGuardService as AuthGuard } from './Services/auth-guard.service';
 
 const routes: Routes = [{
 
@@ -18,21 +20,22 @@ const routes: Routes = [{
   path: 'login',
 component: LoginComponent
 },
-// {
-// path: 'nav-bar',
-// component: NavBarComponent
-// },
+{ path: '**', redirectTo: '' },
 {
   path:'pantry',
-  component:PantryComponent
+  component:PantryComponent,
+  canActivate: [AuthGuard]
 },
 {
   path:'preferences',
-  component: PreferencesComponent
+  component: PreferencesComponent,
+  canActivate: [AuthGuard]
+  
 },
 {
   path:'recipes',
-  component:RecipesComponent
+  component:RecipesComponent,
+  canActivate: [AuthGuard]
 },
 {
   path:'sign-up',
