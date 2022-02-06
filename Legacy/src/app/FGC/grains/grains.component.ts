@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-grains',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GrainsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+  back(){
+    this.router.navigate(['./pantry.comcponent.html']);
   }
 
 }

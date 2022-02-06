@@ -1,13 +1,20 @@
+<form action="">
 <label for="food" >
-    <input type="radio" name="Grains" value="Wheat Bread">Wheat Bread
+    <input type="radio" name="Grains" value="Whole Grain Bread">Whole Grain Bread
+    <td><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]" value="{{qty}}"></td>
 </label><br>
 <label for="food" >
-    <input type="radio" name="Grains" value="">
-</label><br>
-
-<label for="food" >
-    <input type="radio" name="Grains" value="">
+    <input type="radio" name="Grains" value="All-Purpose Flour">All-Purpose Flower
+    <td><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]" value="{{qty}}"></td>
 </label><br>
 <label for="food" >
-    <input type="radio" name="Grains" value="">
+    <input type="radio" name="Grains" value="Sourdough Bread">Sourdough
+    <td><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]" value="{{qty}}"></td>
 </label><br>
+<label for="food" >
+    <input type="radio" name="Grains" value="French Bread">French Bread
+    <td><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]" value="{{qty}}"></td>
+</label><br>
+<button (click)="save()">Done</button> 
+<button (click)="back()">Back</button>
+</form>

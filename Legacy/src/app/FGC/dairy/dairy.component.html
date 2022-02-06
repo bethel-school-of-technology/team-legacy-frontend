@@ -1,12 +1,20 @@
+<form action="">
 <label for="food" >
     <input type="radio" name="Dairy" value="Milk">Milk
+    <td><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]" value="{{qty}}"></td>
 </label>
 <label for="food" >
-    <input type="radio" name="Dairy" value="">
+    <input type="radio" name="Dairy" value="shredded Cheddar Cheese">Shredded Cheddar
+    <td><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]" value="{{qty}}"></td>
 </label><br>
 <label for="food" >
-    <input type="radio" name="Dairy" value="">
+    <input type="radio" name="Dairy" value="Mozzarella Cheese">Mozzarella Cheese
+    <td><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]" value="{{qty}}"></td>
 </label><br>
 <label for="food" >
-    <input type="radio" name="Dairy" value="">
+    <input type="radio" name="Dairy" value="Butter">Butter
+    <td><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]" value="{{qty}}"></td>
 </label><br>
+<button (click)="save()">Done</button> 
+<button (click)="back()">Back</button>
+</form>

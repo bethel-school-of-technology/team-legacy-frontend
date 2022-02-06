@@ -17,9 +17,14 @@ export class CannedGoodsComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  foodInCan() {
+  save() {
     // this.localStorageService.foodInCan(this.newCanned);
+    // localStorage.setItem('a_value',$('input[name="M1P1"]:checked').val());
 
+    // alert(localStorage.getItem('a_value'));
 
+  }
+  back(){
+    this.router.navigate(['./pantry.comcponent.html']);
   }
 }
