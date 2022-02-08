@@ -1,20 +1,38 @@
-<form action="">
-<label for="food" >
-    <input type="radio" name="Condiments" value="Extra Virgin Olive Oil">Extra Virgin Olive Oil
-    <td><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]" value="{{qty}}"></td>
-</label><br>
-<label for="food" >
-    <input type="radio" name="Condiments" value="Vegetable Oil">Vegetable Oil
-    <td><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]" value="{{qty}}"></td>
-</label><br>
-<label for="food" >
-    <input type="radio" name="Condiments" value="Sugar">sugar
-    <td><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]" value="{{qty}}"></td>
-</label><br>
-<label for="food" >
-    <input type="radio" name="Condiments" value="Baking Powder">Baking Powder
-    <td><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]" value="{{qty}}"></td>
-</label><br>
-<button (click)="save()">Done</button> 
-<button (click)="back()">Back</button>
+<form [FormGroup]="foodsFormGroup">
+  <label for="food">
+    <input type="radio" name="Condiments" [checked]="idx === 0" [value]="entry.id"
+      (change)="onSelectionChange(entry)">Extra Virgin Olive Oil
+    <td>{%raw%}{{ entry.ingredient }}{%endraw%}</td>
+    <td><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]"
+        value="{{qty}}">
+    </td>
+  </label><br>
+  <label for="food">
+    <input type="radio" name="Condiments" [checked]="idx === 0" [value]="entry.id"
+      (change)="onSelectionChange(entry)">Vegetable Oil
+    <td>{%raw%}{{ entry.ingredient }}{%endraw%}</td>
+    <td><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]"
+        value="{{qty}}">
+    </td>
+
+
+    <label for="food">
+      <input type="radio" name="Condiments" [checked]="idx === 0" [value]="entry.id"
+        (change)="onSelectionChange(entry)">Sugar
+      <td>{%raw%}{{ entry.ingredient }}{%endraw%}</td>
+      <td><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]"
+          value="{{qty}}"></td>
+    </label><br>
+    <label for="food">
+      <input type="radio" name="Condiments" [checked]="idx === 0" [value]="entry.id"
+        (change)="onSelectionChange(entry)">Baking Powder
+      <td>{%raw%}{{ entry.ingredient }}{%endraw%}</td>
+      <td><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]"
+          value="{{qty}}"></td>
+
+
+
+      <button (click)="save()">Done</button>
+      <button (click)="back()">Back</button>
+
 </form>

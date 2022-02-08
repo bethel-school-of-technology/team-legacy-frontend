@@ -1,20 +1,30 @@
-<form action="">
-<label for="food" >
-    <input type="radio" name="Spices" value="Salt">Salt
-    <td><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]" value="{{qty}}"></td>
-</label><br>
-<label for="food" >
-    <input type="radio" name="Spices" value="Kosher Salt">Kosher Salt
-    <td><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]" value="{{qty}}"></td>
-</label><br>
-<label for="food" >
-    <input type="radio" name="Spices" value="Black Pepper">Black Pepper
-    <td><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]" value="{{qty}}"></td>
-</label><br>
-<button (click)="save()">Done</button> 
-<button (click)="back()">Back</button>
+<form [FormGroup]="foodsFormGroup">
+  <label for="food">
+    <input type="radio" name="Spices" [checked]="idx === 0" [value]="entry.id" (change)="onSelectionChange(entry)">Salt
+    <td>{%raw%}{{ entry.ingredient }}{%endraw%}</td>
+    <td><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]"
+        value="{{qty}}">
+    </td>
+  </label><br>
+  <label for="food">
+    <input type="radio" name="Spices" [checked]="idx === 0" [value]="entry.id"
+      (change)="onSelectionChange(entry)">Kosher Salt
+    <td>{%raw%}{{ entry.ingredient }}{%endraw%}</td>
+    <td><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]"
+        value="{{qty}}">
+    </td>
+
+    <label for="food">
+      <input type="radio" name="Spices" [checked]="idx === 0" [value]="entry.id"
+        (change)="onSelectionChange(entry)">Black Pepper
+      <td>{%raw%}{{ entry.ingredient }}{%endraw%}</td>
+      <td><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]"
+          value="{{qty}}"></td>
+    </label><br>
+
+
+
+    <button (click)="save()">Done</button>
+    <button (click)="back()">Back</button>
+
 </form>
-<!-- <label for="food" >
-    <input type="radio" name="Spices" value="">
-    <td><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]" value="{{qty}}"></td>
-</label><br> -->

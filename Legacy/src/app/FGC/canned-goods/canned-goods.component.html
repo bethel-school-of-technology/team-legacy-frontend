@@ -1,22 +1,24 @@
-<form [FormGroup]= "foodsFormGroup">
+<form [FormGroup]= "foodsFormGroup" 
+>
+
 <label for="food" >
-    <input type="radio" name="cannedGoods" value="Pizza Sauce">Pizza Sauce
+    <input type="radio" name="cannedGoods"  
+    [checked]="idx === 0" 
+    [value]="entry.id" 
+    (change)="onSelectionChange(entry)">Pizza Sauce
+    <td>{%raw%}{{ entry.ingredient }}{%endraw%}</td>
     <td><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]" value="{{qty}}"></td>
 </label><br>
 <label for="food" >
-    <input type="radio" name="cannedGoods" value="">
+    <input type="radio" name="cannedGoods" 
+    [checked]="idx === 0" 
+    [value]="entry.id" 
+    (change)="onSelectionChange(entry)">
+    <td>{%raw%}{{ entry.ingredient }}{%endraw%}</td>
     <td><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]" value="{{qty}}"></td>
-<!-- </label><br>
-<label for="food" >
-    <input type="radio" name="cannedGoods" value="">
-    <td><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]" value="{{qty}}"></td>
-</label><br>
-<label for="food" >
-    <input type="radio" name="cannedGoods" value="">
-    <td><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]" value="{{qty}}"></td>
-</label><br> -->
-<button (click)="save()">Done</button> 
-<button (click)="back()">Back</button>
+
+
+<button (click)="back()">Done</button>
 </form>
 
 
@@ -24,3 +26,6 @@
 
 <!-- possible grid format instead of breaks -->
 <!-- To push to LS loop through array of items and pus what is selected with if/else statement? -->
+
+
+
