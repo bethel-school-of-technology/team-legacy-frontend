@@ -1,13 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-  padding: 70px;
+  /* padding: 20px; */
+  /* margin: 0px 200px 0px 200px; */
   font-family: "Montserrat";
-  font-size: 20px;
-  background: linear-gradient(180deg, #b195a8 0%, #cfd1c5 100%);
-  border: 1px solid #000000;
-  box-sizing: border-box;
+  /* font-size: 20px; */
+  /* background: linear-gradient(180deg, #cfd1c5 0%, #ffffff 100%); */
+  /* border: 1px solid #000000; */
+  /* box-sizing: border-box; */
+  /* background-color: rgb(244, 222, 102); */
+  
 }
 
 .w100 {
   font-weight: 100;
 }
+
+
+
