@@ -1,4 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { TouchSequence } from 'selenium-webdriver';
+import { Url } from 'url';
 
 @Component({
   selector: 'app-pantry',
@@ -6,12 +10,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pantry.component.css']
 })
 export class PantryComponent implements OnInit {
-  router: any;
-
-  constructor() { }
+  // router: any;
+  // url: string = '';
+  // usersArray: Array = [];
+  constructor(private http: HttpClient, private router: Router) { 
+    // this.http.getAllTasks().subscribe((data: ))
+    
+    // this.http.get(this.url).subscribe(data => {
+    //   data.json().forEach((element: { ingredient: any; }) => {
+    //     TouchSequence.usersArray.push(element.ingredient)
+    //   })
+    // })
+  }
 
   ngOnInit(): void {
+    // localStorage.setItem("ingerdient.id");
   }
+  
+  // Potential solution to json error
+  // public getAllTasks():Observable<Task[]> {  
+  //     let URI = `${this.serverApi}/tasks/`;
+  //     return this.http.get<Task[]>(URI);
+  //   }
+
   goToCannedGoods() {
     this.router.navigate(['./canned-goods.component.html']);
   }
@@ -42,3 +63,8 @@ export class PantryComponent implements OnInit {
   }
 
 }
+
+// public getAllTasks():Observable<Task[]> {  Potential solution to json error
+//   let URI = `${this.serverApi}/tasks/`;
+//   return this.http.get<Task[]>(URI);
+// }

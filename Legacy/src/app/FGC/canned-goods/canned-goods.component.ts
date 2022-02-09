@@ -15,7 +15,8 @@ export class CannedGoodsComponent implements OnInit {
   // newCanned: Canned[] = [];
 entries = [];
 // selectedEntry;
-LS = this.localStorageService;
+ data: localStorage.get('ingredient.id');
+// LS = this.localStorageService;
   constructor(private router: Router, private localStorageService: LocalStorageService, private http: HttpClient) { }
 
   ngOnInit(): void { }

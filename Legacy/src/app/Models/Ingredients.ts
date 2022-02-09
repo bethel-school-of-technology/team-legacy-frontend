@@ -1,4 +1,4 @@
 export class List{
-    name: string;
-    id: number
+ id: number = 0;
+ ingredient: string = "";
 }

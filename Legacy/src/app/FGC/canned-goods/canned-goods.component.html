@@ -22,10 +22,21 @@
 </form>
 
 
+<!-- To push to LS loop through array of items and push what is selected with if/else statement? -->
 
+<!-- another method for possibly submiting data from radio buttons -->
+<form action="">
+    <div *ngfor="let can of cans">
+    <input 
+    type="radio" 
+    name="cannedGoods"
+    value="{{can}}"
+    (change)="radioChangeHandler($event)">
+    <i>{{day}}</i>
+    </div>
+  
+    
+    <button (click)="back()">Done</button>
+  </form>
 
-<!-- possible grid format instead of breaks -->
-<!-- To push to LS loop through array of items and pus what is selected with if/else statement? -->
-
-
-
+<!-- another method for possibly submiting data from radio buttons -->

@@ -23,6 +23,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { HttpClientModule } from '@angular/common/http';
     FruitsComponent,
     GrainsComponent,
     CannedGoodsComponent,
-    CondimentsComponent
+    CondimentsComponent,
+    FilterPipe
     
   ],
   imports: [
