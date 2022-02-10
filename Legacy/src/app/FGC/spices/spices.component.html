@@ -1,9 +1,13 @@
 <form [FormGroup] = foodsFormGroup>
   <h2 style="text-decoration: underline; -ms-flex-align: center;">List your seasonings.</h2>
- <tr><input type="text" placeholder="1"></tr><br>
- <tr><input type="text" placeholder="2" ></tr><br>
- <tr><input type="text" placeholder="3" ></tr><br>
- <tr><input type="text" placeholder="4" ></tr><br>
+ <tr><input type="text" placeholder="1"></tr><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]" value="{{qty}}">
+ <br>
+ <tr><input type="text" placeholder="2" ></tr><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]" value="{{qty}}">
+ <br>
+ <tr><input type="text" placeholder="3" ></tr><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]" value="{{qty}}">
+ <br>
+ <tr><input type="text" placeholder="4" ></tr><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]" value="{{qty}}">
+ <br>
 
  <button (click)="back()">Done</button>
  

@@ -1,12 +1,15 @@
 
-<!-- Create form to submit ingredients. -->
 
 <form [FormGroup] = foodsFormGroup>
   <h2 style="text-decoration: underline; -ms-flex-align: center;">List your Condiments.</h2>
- <tr><input type="text" placeholder="1"></tr><br>
- <tr><input type="text" placeholder="2" ></tr><br>
- <tr><input type="text" placeholder="3" ></tr><br>
- <tr><input type="text" placeholder="4" ></tr><br>
+ <tr><input type="text" placeholder="1"></tr><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]" value="{{qty}}">
+ <br>
+ <tr><input type="text" placeholder="2" ></tr><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]" value="{{qty}}">
+ <br>
+ <tr><input type="text" placeholder="3" ></tr><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]" value="{{qty}}">
+ <br>
+ <tr><input type="text" placeholder="4" ></tr><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]" value="{{qty}}">
+ <br>
 
  <button (click)="back()">Done</button>
  
@@ -22,43 +25,8 @@
 
 
 
-<!-- <form [FormGroup]="foodsFormGroup">
-  <label for="food">
-    <input type="radio" name="Condiments" [checked]="idx === 0" [value]="entry.id"
-      (change)="onSelectionChange(entry)">Extra Virgin Olive Oil
-    <td>{%raw%}{{ entry.ingredient }}{%endraw%}</td>
-    <td><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]"
-        value="{{qty}}">
-    </td>
-  </label><br>
-  <label for="food">
-    <input type="radio" name="Condiments" [checked]="idx === 0" [value]="entry.id"
-      (change)="onSelectionChange(entry)">Vegetable Oil
-    <td>{%raw%}{{ entry.ingredient }}{%endraw%}</td>
-    <td><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]"
-        value="{{qty}}">
-    </td>
-
-
-    <label for="food">
-      <input type="radio" name="Condiments" [checked]="idx === 0" [value]="entry.id"
-        (change)="onSelectionChange(entry)">Sugar
-      <td>{%raw%}{{ entry.ingredient }}{%endraw%}</td>
-      <td><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]"
-          value="{{qty}}"></td>
-    </label><br>
-    <label for="food">
-      <input type="radio" name="Condiments" [checked]="idx === 0" [value]="entry.id"
-        (change)="onSelectionChange(entry)">Baking Powder
-      <td>{%raw%}{{ entry.ingredient }}{%endraw%}</td>
-      <td><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]"
-          value="{{qty}}"></td>
 
 
 
-      
-      <button (click)="back()">Done</button>
 
-</form>
-use checkbox instead of radio -->
 
