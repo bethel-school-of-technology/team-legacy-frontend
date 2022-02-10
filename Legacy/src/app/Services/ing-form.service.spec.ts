@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { RadioButtonService } from './radio-button.service';
+import { IngFormService } from './ing-form.service';
 
-describe('RadioButtonService', () => {
-  let service: RadioButtonService;
+describe('IngFormService', () => {
+  let service: IngFormService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(RadioButtonService);
+    service = TestBed.inject(IngFormService);
   });
 
   it('should be created', () => {

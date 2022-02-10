@@ -3,6 +3,8 @@ import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { IngFormService } from 'src/app/Services/ing-form.service';
+import { Ingredient } from 'src/app/Models/Ingredients';
 
 import { LocalStorageService } from 'src/app/Services/local-storage.service';
 
@@ -12,20 +14,16 @@ import { LocalStorageService } from 'src/app/Services/local-storage.service';
   styleUrls: ['./canned-goods.component.css']
 })
 export class CannedGoodsComponent implements OnInit {
-  // newCanned: Canned[] = [];
-entries = [];
-// selectedEntry;
- data: localStorage.get('ingredient.id');
-// LS = this.localStorageService;
-  constructor(private router: Router, private localStorageService: LocalStorageService, private http: HttpClient) { }
+  ingredient: Ingredient = new Ingredient;
+  constructor(private router: Router, private ingFormService: IngFormService, private http: HttpClient) { }
 
   ngOnInit(): void { }
 
-  // onSelectionChange(entry){
-  //   this.selectedEntry = Object.LS({}, this.selectedEntry, entry);
-  // }
   
   back(){
-    this.router.navigate(['./pantry.comcponent.html']);
+    this.router.navigate(['./pantry.component.html']);
+    this.ingFormService.addNewIngredient(this.ingredient).subscribe(
+      response => {alert("Great! ALL done here.");}
+    )
   }
 }

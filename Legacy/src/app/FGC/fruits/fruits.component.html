@@ -1,31 +1,8 @@
-<form [FormGroup]="foodsFormGroup">
-  <label for="food">
-    <input type="radio" name="Fruits" [checked]="idx === 0" [value]="entry.id"
-      (change)="onSelectionChange(entry)">Avocado
-    <td>{%raw%}{{ entry.ingredient }}{%endraw%}</td>
-    <td><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]"
-        value="{{qty}}">
-    </td>
-  </label><br>
-  <label for="food">
-    <input type="radio" name="Fruits" [checked]="idx === 0" [value]="entry.id"
-      (change)="onSelectionChange(entry)">Lemons
-    <td>{%raw%}{{ entry.ingredient }}{%endraw%}</td>
-    <td><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]"
-        value="{{qty}}">
-    </td>
+<form [FormGroup] = foodsFormGroup>
+  <h2 style="text-decoration: underline; -ms-flex-align: center;">List your fruits.</h2>
+ <tr><input type="text" placeholder="1"></tr><br>
+ <tr><input type="text" placeholder="2" ></tr><br>
+ <tr><input type="text" placeholder="3" ></tr><br>
+ <tr><input type="text" placeholder="4" ></tr><br>
 
-
-    <label for="food">
-      <input type="radio" name="Fruits" [checked]="idx === 0" [value]="entry.id"
-        (change)="onSelectionChange(entry)">Bananas
-      <td>{%raw%}{{ entry.ingredient }}{%endraw%}</td>
-      <td><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]"
-          value="{{qty}}"></td>
-    </label>
-  
-
-
-      <button (click)="back()">Done</button>
-
-</form>
+ <button (click)="back()">Done</button>
