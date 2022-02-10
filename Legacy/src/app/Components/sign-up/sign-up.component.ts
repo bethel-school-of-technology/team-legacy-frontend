@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/Services/auth.service';
+import { User} from '../../models/user'
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignUpComponent implements OnInit {
 
-  constructor() { }
+  public user: User = new User();
+
+  constructor(private AuthService:AuthService, private router:Router){
+    
+   }
 
   ngOnInit(): void {
   }
 
+public register() {
+  console.log('Registere Method called');
+this.AuthService.register(this.user).subscribe(response => {
+  console.log(response);
+  this.user = response;
+  this.router.navigate(['login'])
+});
 }
+}
+//Go to lesson and plug in the variables 
