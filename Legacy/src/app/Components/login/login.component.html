@@ -9,11 +9,11 @@
             <div>
                 <div class="form-container"></div>
                 <label for="Username"></label>
-                <input class="form-input" name="Username" type="email" placeholder="Username">
+                <input class="form-input" name="username" type="text" placeholder="Username"  [(ngModel)]="newUser.username">
             </div>
             <div class="form-container">
                 <label for="Password"></label>
-                <input class="form-input" name="Password"  type="password" placeholder="Password">
+                <input class="form-input" name="password"  type="password" placeholder="Password"  [(ngModel)]="newUser.password">
             </div>
             <div class="flex-button">
                 <button type="button" class="form-button" (click)="goToRecipes()" >Login</button>
