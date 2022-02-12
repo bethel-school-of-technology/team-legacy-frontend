@@ -1,46 +1,67 @@
-
 <div id="sign-up">
   <div class="container center">
     <form class="flex">
       <div>
         <h1>Sign Up Form</h1>
-
       </div>
       <div class="form-group">
         <label for="firstName">First Name</label>
-        <input class="form-input" type="text" name="firstName" required>
-
+        <input [(ngModel)]="user.firstName" class="form-input"
+        type="text" name="firstName" required/>
       </div>
       <div class="form-group">
         <label for="lastName">Last Name</label>
-        <input class="form-input" type="text" name="lastName" required>
-
+        <input
+          [(ngModel)]="user.lastName"
+          class="form-input"
+          type="text"
+          name="lastName"
+          required
+        />
       </div>
 
       <div class="form-group">
-        <label for="userName">Username</label>
-        <input class="form-input" type="text" name="userName" required>
-
+        <label for="username">Username</label>
+        <input
+          [(ngModel)]="user.username"
+          class="form-input"
+          type="text"
+          name="username"
+          required
+        />
       </div>
       <div class="form-group">
         <label for="password">Password</label>
-        <input class="form-input" type="password" name="password" required minlength="8">
-
+        <input
+          [(ngModel)]="user.password"
+          class="form-input"
+          type="password"
+          name="password"
+          required
+          minlength="8"
+        />
       </div>
 
-      <div class="form-group">
+      <!-- <div class="form-group">
         <label for="rePassword">Confirm password</label>
         <input class="form-input" type="password" name="rePassword" required minlength="8">
 
-      </div>
+      </div> -->
 
-     
       <div class="flex-button">
-        <button class="form-button btn-primary btn:hover">Submit</button>
-        <button class="form-button btn-primary btn:hover">Go Back</button>
+        <button
+          type="button"
+          (click)="register()"
+          class="form-button btn-primary btn:hover"
+        >
+          Submit
+        </button>
+        <button type="button" class="form-button btn-primary btn:hover">
+          Go Back
+        </button>
       </div>
-
     </form>
   </div>
 
-  <div>
+  <div></div>
+</div>
