@@ -7,6 +7,7 @@ import { IngFormService } from 'src/app/Services/ing-form.service';
 import { Ingredient } from 'src/app/Models/Ingredients';
 
 import { LocalStorageService } from 'src/app/Services/local-storage.service';
+import { count } from 'console';
 
 @Component({
   selector: 'app-canned-goods',
@@ -14,11 +15,14 @@ import { LocalStorageService } from 'src/app/Services/local-storage.service';
   styleUrls: ['./canned-goods.component.css']
 })
 export class CannedGoodsComponent implements OnInit {
-  ingredient: Ingredient = new Ingredient;
+ingredient: Ingredient = new Ingredient
+counterValue = 0;
+// ingredient: Ingredient[] = new Ingredient[];
+
   constructor(private router: Router, private ingFormService: IngFormService, private http: HttpClient) { }
 
   ngOnInit(): void { }
-
+ 
   
   back(){
     this.router.navigate(['./pantry.component.html']);
@@ -26,4 +30,10 @@ export class CannedGoodsComponent implements OnInit {
       response => {alert("Great! ALL done here.");}
     )
   }
+ increment(){
+   this.counterValue++;
+ }
+ decrement(){
+   this.counterValue--;
+ }
 }

@@ -1,13 +1,13 @@
 
 <form [FormGroup] = foodsFormGroup>
   <h2 style="text-decoration: underline; -ms-flex-align: center;">List your meat products</h2>
- <tr><input type="text" placeholder="1"></tr><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]" value="{{qty}}">
+ <tr><input type="text" placeholder="1"></tr><button (click)="increment()">+</button>{{counterValue}}<button (click)="decrement()">-</button> 
  <br>
- <tr><input type="text" placeholder="2" ></tr><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]" value="{{qty}}">
+ <tr><input type="text" placeholder="2" ></tr><button (click)="increment()">+</button>{{counterValue}}<button (click)="decrement()">-</button> 
  <br>
- <tr><input type="text" placeholder="3" ></tr><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]" value="{{qty}}">
+ <tr><input type="text" placeholder="3" ></tr><button (click)="increment()">+</button>{{counterValue}}<button (click)="decrement()">-</button> 
  <br>
- <tr><input type="text" placeholder="4" ></tr><input type="text" class="input-text" name="product[options][{{id}}][values][{{select_id}}][qty]" value="{{qty}}">
+ <tr><input type="text" placeholder="4" ></tr><button (click)="increment()">+</button>{{counterValue}}<button (click)="decrement()">-</button> 
  <br>
 
  <button (click)="back()">Done</button>
