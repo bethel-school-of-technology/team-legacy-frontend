@@ -18,10 +18,10 @@ const routes: Routes = [{
   path: 'login',
 component: LoginComponent
 },
-// {
-// path: 'nav-bar',
-// component: NavBarComponent
-// },
+{
+path: 'nav-bar',
+component: NavBarComponent
+},
 {
   path:'pantry',
   component:PantryComponent

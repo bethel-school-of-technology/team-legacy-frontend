@@ -1,28 +1,51 @@
 <header class="head">
-<div id="login">
+  <div id="login">
     <div class="container flex-container">
-        <form class="flex">
-            <div id="heading">
-                <h1>Login</h1>
-               
-            </div>
-            <div>
-                <div class="form-container"></div>
-                <label for="Username"></label>
-                <input class="form-input" name="Username" type="email" placeholder="Username">
-            </div>
-            <div class="form-container">
-                <label for="Password"></label>
-                <input class="form-input" name="Password"  type="password" placeholder="Password">
-            </div>
-            <div class="flex-button">
-                <button type="button" class="form-button" (click)="goToRecipes()" >Login</button>
-                <button type="button" class="form-button" (click)="goToSignUp()">Sign Up</button>
-            </div>
+      <form class="flex">
+        <div id="heading">
+          <img src="../../../assets/WHAT THE FOOD-white.png" />
+          <br />
+          <br />
+          <h1>Login</h1>
+        </div>
+        <div>
+          <div class="form-container"></div>
+          <label for="Username"></label>
+          <input
+            class="form-input"
+            name="Username"
+            type="email"
+            placeholder="Username"
+          />
+        </div>
+        <div class="form-container">
+          <label for="Password"></label>
+          <input
+            class="form-input"
+            name="Password"
+            type="password"
+            placeholder="Password"
+          />
+        </div>
+        <div class="flex-button">
+          <button type="button" class="form-button" (click)="goToRecipes()">
+            Login
+          </button>
+          <br />
+          <br />
+          <br />
+          <br />
 
-
-
-        </form>
+          <h3>Don't have an account?</h3>
+          <a
+            class="clickHere"
+            style="color: whitesmoke"
+            href="http://localhost:4200/sign-up"
+            >click here.</a
+          >
+          <!-- <button type="text" class="form-button" (click)="goToSignUp()"> here.</button> -->
+        </div>
+      </form>
     </div>
-</div>
+  </div>
 </header>

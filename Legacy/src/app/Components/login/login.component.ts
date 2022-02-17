@@ -15,10 +15,10 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
   goToSignUp() {
-    this.router.navigate(['./sign-up.component.html']);    
+    this.router.navigate(['./sign-up']);    
   }
   goToRecipes(){
-    this.router.navigate(['./recipes.component.html'])
+    this.router.navigate(['./recipes'])
   }
 
 

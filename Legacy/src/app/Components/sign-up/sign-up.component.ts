@@ -17,9 +17,12 @@ export class SignUpComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  goToLogin(){
+    this.router.navigate(['./login'])
+  }
 
 public register() {
-  console.log('Registere Method called');
+  console.log('Register Method called');
 this.AuthService.register(this.user).subscribe(response => {
   console.log(response);
   this.user = response;

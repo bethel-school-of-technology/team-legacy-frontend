@@ -23,6 +23,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
+import {IvyCarouselModule} from 'angular-responsive-carousel';
+// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,9 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    // NgbModule,
+    IvyCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

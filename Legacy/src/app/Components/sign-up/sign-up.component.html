@@ -1,37 +1,47 @@
+<header class="head">
 <div id="sign-up">
   <div class="container center">
     <form class="flex">
-      <div>
-        <h1>Sign Up Form</h1>
+      <div id="heading">
+        <img src="../../../assets/WHAT THE FOOD-white.png" />
+        <br />
+        <br />
+        <h1>Sign Up</h1>
+      </div>
+      <br>
+      <div class="form-group">
+        
+        <input
+          [(ngModel)]="user.firstName"
+          class="form-input"
+          type="text"
+          name="firstName"
+          required
+          placeholder="First Name"
+        />
       </div>
       <div class="form-group">
-        <label for="firstName">First Name</label>
-        <input [(ngModel)]="user.firstName" class="form-input"
-        type="text" name="firstName" required/>
-      </div>
-      <div class="form-group">
-        <label for="lastName">Last Name</label>
         <input
           [(ngModel)]="user.lastName"
           class="form-input"
           type="text"
           name="lastName"
           required
+          placeholder="Last Name"
         />
       </div>
 
       <div class="form-group">
-        <label for="username">Username</label>
         <input
           [(ngModel)]="user.username"
           class="form-input"
           type="text"
           name="username"
           required
+          placeholder="Username"
         />
       </div>
       <div class="form-group">
-        <label for="password">Password</label>
         <input
           [(ngModel)]="user.password"
           class="form-input"
@@ -39,6 +49,7 @@
           name="password"
           required
           minlength="8"
+          placeholder="Password"
         />
       </div>
 
@@ -56,7 +67,7 @@
         >
           Submit
         </button>
-        <button type="button" class="form-button btn-primary btn:hover">
+        <button type="button" class="form-button" (click)="goToLogin()" style="color: black">
           Go Back
         </button>
       </div>
@@ -65,3 +76,4 @@
 
   <div></div>
 </div>
+</header>
