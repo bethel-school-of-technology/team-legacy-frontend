@@ -52,9 +52,11 @@
       <p>Grains</p>
     </div>
     <div class="column">
-      <button type="button" onclick="goToCannedGoods()"><img src="assets/canned-food.png" height="20"
+      <button type="button" (click)="goToCannedGoods()"><img src="assets/canned-food.png" height="20"
           width="20" /></button>
       <p>Canned Goods</p>
+      <li><a routerLink="/canned-goods.component" routerLinkActive="active" src="assets/canned-food.png" height="20"
+        width="20">Canned Goods</a></li>
     </div>
   </div>
 

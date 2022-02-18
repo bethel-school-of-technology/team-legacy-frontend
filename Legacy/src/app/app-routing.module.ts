@@ -9,6 +9,13 @@ import { RecipesComponent } from './Components/recipes/recipes.component';
 import { SignUpComponent } from './Components/sign-up/sign-up.component';
 import { CanActivate } from '@angular/router';
 import { AuthGuardService as AuthGuard } from './Services/auth-guard.service';
+import { CannedGoodsComponent } from './FGC/canned-goods/canned-goods.component';
+import { CondimentsComponent } from './FGC/condiments/condiments.component';
+import { DairyComponent } from './FGC/dairy/dairy.component';
+import { FruitsComponent } from './FGC/fruits/fruits.component';
+import { GrainsComponent } from './FGC/grains/grains.component';
+import { ProtienComponent } from './FGC/protien/protien.component';
+import { SpicesComponent } from './FGC/spices/spices.component';
 
 const routes: Routes = [{
 
@@ -20,16 +27,16 @@ const routes: Routes = [{
   path: 'login',
 component: LoginComponent
 },
-{ path: '**', redirectTo: '' },
+// { path: '**', redirectTo: '' },
 {
   path:'pantry',
   component:PantryComponent,
-  canActivate: [AuthGuard]
+  // canActivate: [AuthGuard]
 },
 {
   path:'preferences',
   component: PreferencesComponent,
-  canActivate: [AuthGuard]
+  // canActivate: [AuthGuard]
   
 },
 {
@@ -41,6 +48,41 @@ component: LoginComponent
   path:'sign-up',
   component:SignUpComponent
 },
+{
+  path: 'canned-goods',
+component:CannedGoodsComponent,
+canActivate: [AuthGuard]
+},
+{
+  path:'condiments',
+  component:CondimentsComponent,
+  canActivate: [AuthGuard]
+},
+{
+  path:'dairy',
+  component:DairyComponent,
+  canActivate: [AuthGuard]
+},
+{
+  path:'fruits',
+  component:FruitsComponent,
+  canActivate: [AuthGuard]
+},
+{
+  path:'grains',
+  component:GrainsComponent,
+  canActivate: [AuthGuard]
+},
+{
+  path:'protien',
+  component:ProtienComponent,
+  canActivate: [AuthGuard]
+},
+{
+  path:'spices',
+  component:SpicesComponent,
+  canActivate: [AuthGuard]
+}
 
 ];
 

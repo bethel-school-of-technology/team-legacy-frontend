@@ -3,37 +3,38 @@
     <h2 style="text-decoration: underline; -ms-flex-align: center;">List your Canned Goods.</h2>
    <tr><input type="text" placeholder="1"></tr>
    <br>
-   <tr><input type="text" placeholder="2" ></tr>
+   <tr><input type="text" placeholder="2"></tr>
    <br>
-   <tr><input type="text" placeholder="3" ></tr>
+   <tr><input type="text" placeholder="3"></tr>
    <br>
-   <tr><input type="text" placeholder="4" ></tr>
+   <tr><input type="text" placeholder="4"></tr>
    <br>
 
    <button (click)="back()">Done</button>
 
-   <div>{{ingredient}}</div>
+   <!-- <p>{{ingredient.ingredient}}</p> -->
+   <!-- <button class="deleteItem" (click)="deleteIngredient()"></button> -->
 </form>
 
 
 
 <!-- ****optional**** -->
-<!-- 
+
+<!-- <button (click)="increment()">+</button>{{counterValue}}<button (click)="decrement()">-</button> 
 <button (click)="increment()">+</button>{{counterValue}}<button (click)="decrement()">-</button> 
 <button (click)="increment()">+</button>{{counterValue}}<button (click)="decrement()">-</button> 
-<button (click)="increment()">+</button>{{counterValue}}<button (click)="decrement()">-</button> 
-<button (click)="increment()">+</button>{{counterValue}}<button (click)="decrement()">-</button> 
+<button (click)="increment()">+</button>{{counterValue}}<button (click)="decrement()">-</button>  -->
 
 
 
 
-<button mat-stroked-button [matMenuTriggerFor]="menu" [disabled]="disabled">
+<!-- <button mat-stroked-button [matMenuTriggerFor]="menu" [disabled]="disabled">
   {{quantity}}
   <mat-icon *ngIf="!disabled">expand_more</mat-icon>
 </button>
 <mat-menu #menu="matMenu">
   <button *ngFor="let no of values" (click)="setQuantity(no)" mat-menu-item>{{no}}</button>
-</mat-menu> -->
+</mat-menu>  -->
 
 
 

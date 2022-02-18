@@ -11,19 +11,33 @@ export class IngFormService {
  url: string = "http://localhost:3000/ingredients";
 //  ingredient: Ingredient[] = new [];
 //  count: number = 0;
- constructor(private http: HttpClient) { }
+
+constructor(private http: HttpClient) { }
 
  addNewIngredient(ingredient:Ingredient): Observable<Ingredient>{
   return this.http.post<Ingredient>(this.url, ingredient);
 }
-// // quantity( ingredient: Ingredient, addedIngredients: Ingredient[]){
-// for (let i : number = 0 ; i < addedIngredients.length ; i++){
-//  if(addedIngredients[i].ingredient.id === ingredient.ingredient.id)
-// }
+// ***  Function to get ingredient the user inputs and render it in the DOM on the same page(Need to be able to delete it)***
+getIngredient(id: number):Observable<Ingredient>{ 
+  
+  return this.http.get<Ingredient>(`${this.url}/${id}`);
+}
+
 }
 
 
 
+
+// deleteIngredient(): Observable<Ingredient>{
+//  return this.http.delete<Ingredient>(this.url);
+// }
+
+
+
+// // quantity( ingredient: Ingredient, addedIngredients: Ingredient[]){
+// for (let i : number = 0 ; i < addedIngredients.length ; i++){
+//  if(addedIngredients[i].ingredient.id === ingredient.ingredient.id)
+// }
 
 
 //] angular.module('counterApp', []);
