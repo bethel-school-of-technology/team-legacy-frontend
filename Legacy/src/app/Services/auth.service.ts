@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { User } from '../models/user';
+import { JwtHelperService } from '@auth0/angular-jwt';
 
 const AUTH_API = 'http://localhost:3000/users/';
 // Make sure url path is correct
@@ -18,6 +19,11 @@ const httpOptions = {
 export class AuthService {
    AUTH_API2 = 'http://localhost:3000/users';
  
+  constructor(private http: HttpClient, public jwtHelper: JwtHelperService) { }
+public isAuthenticated(): boolean {
+  const token = localStorage.getItem('token');
+  return !this.jwtHelper.isTokenExpired('token');
+}
 
   login(username: string, password: string): Observable<any> {
     return this.http.post(AUTH_API + 'login', {
@@ -41,5 +47,4 @@ export class AuthService {
 
 
 
-  constructor(private http: HttpClient) { }
 }

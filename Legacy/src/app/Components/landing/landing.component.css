@@ -1,9 +1,13 @@
 .container {
+<<<<<<< HEAD
   background: url("/assets/WTFsplash.jpeg") no-repeat center center/cover;
+=======
+ 
+>>>>>>> foodGroupComponents
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100%; background: url("/assets/WTFsplash.jpeg") no-repeat center center/cover;
   height: 100%;
   opacity: 100;
 }

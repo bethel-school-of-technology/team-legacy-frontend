@@ -25,6 +25,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 // import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
     FruitsComponent,
     GrainsComponent,
     CannedGoodsComponent,
-    CondimentsComponent
+    CondimentsComponent,
+    FilterPipe
     
   ],
   imports: [

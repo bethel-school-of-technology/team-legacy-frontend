@@ -1,17 +1,63 @@
-<!-- <form [FormGroup]= "foodsFormGroup"> -->
-<label for="food" >
-    <input type="radio" name="cannedGoods" value="">
-</label><br>
-<label for="food" >
-    <input type="radio" name="cannedGoods" value="">
-</label><br>
-<label for="food" >
-    <input type="radio" name="cannedGoods" value="">
-</label><br>
-<label for="food" >
-    <input type="radio" name="cannedGoods" value="">
-</label><br>
-<!-- <button (click)="save()">Done</button> -->
-<!-- </form> -->
-<!-- possible grid format instead of breaks -->
-<!-- To push to LS loop through array of items and pus what is selected with if/else statement? -->
+<!-- [FormGroup] = foodsFormGroup -->
+<form>
+    <h2 style="text-decoration: underline; -ms-flex-align: center;">List your Canned Goods.</h2>
+   <tr><input type="text" placeholder="1"></tr>
+   <br>
+   <tr><input type="text" placeholder="2"></tr>
+   <br>
+   <tr><input type="text" placeholder="3"></tr>
+   <br>
+   <tr><input type="text" placeholder="4"></tr>
+   <br>
+
+   <button (click)="back()">Done</button>
+
+   <!-- <p>{{ingredient.ingredient}}</p> -->
+   <!-- <button class="deleteItem" (click)="deleteIngredient()"></button> -->
+</form>
+
+
+
+<!-- ****optional**** -->
+
+<!-- <button (click)="increment()">+</button>{{counterValue}}<button (click)="decrement()">-</button> 
+<button (click)="increment()">+</button>{{counterValue}}<button (click)="decrement()">-</button> 
+<button (click)="increment()">+</button>{{counterValue}}<button (click)="decrement()">-</button> 
+<button (click)="increment()">+</button>{{counterValue}}<button (click)="decrement()">-</button>  -->
+
+
+
+
+<!-- <button mat-stroked-button [matMenuTriggerFor]="menu" [disabled]="disabled">
+  {{quantity}}
+  <mat-icon *ngIf="!disabled">expand_more</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+  <button *ngFor="let no of values" (click)="setQuantity(no)" mat-menu-item>{{no}}</button>
+</mat-menu>  -->
+
+
+
+
+
+<!-- {{ingredient.id}} for displaying user ingredient input? -->
+
+
+
+<!-- 
+
+<button ng-click="count = count + 1" ng-init="count=0">+</button>
+  <span>count: {{count}}</span>
+<button ng-click="count = count - 1" ng-init="count=0">-</button>
+  <span>count: {{count}}</span>
+
+  <div ng-controller="counterCtrl as ctrl">
+    <button ng-click="ctrl.increment()" ng-disabled="ctrl.isLimitExceeded()">+</button>
+    <button ng-click="ctrl.decrement()" ng-disabled="countIsZero()">-</button> -->
+
+
+
+<!-- find out how to do the mathmatics in the .TS files to get the accurate amount of specific ingredient. -->
+<!-- To push to LS loop through array of items and push what is selected with if/else statement? -->
+<!-- Do we just route the "Lets Get Cookin!" button in the pantry to the recipes page since htere is no LS to pull from? -->
+
