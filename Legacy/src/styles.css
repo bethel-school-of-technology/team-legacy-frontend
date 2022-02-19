@@ -16,7 +16,7 @@ div{
 .links{
 padding-left: 40px;
 padding-bottom: 1.5%;
-font-size: 40px;
+font-size: 30px;
 }
 
 a{
@@ -61,11 +61,18 @@ a{
   padding-top: 12.5%;
 }
 
+.form-button{
+  border-radius: 10%;
+  background: #f8ed56;
+  font-family:  href='//fonts.googleapis.com/css?family=Montserrat:thin,extra-light,light,100,200,300,400,500,600,700,800' ;
+}
+
 /* You can add global styles to this file, and also import other style files */
 body {
   font-family: "Montserrat";
   line-height: 5%;
-  /* background: linear-gradient(180deg, #cfd1c5 0%, #ffffff 100%); */
+  /* background: linear-gradient(90deg, #B92B27 0%, #1565C0 100%); */
+  
   background: linear-gradient(180deg, #ffffff 0%, #000000 100%);
   box-sizing: border-box;
   height: max-content;
@@ -82,7 +89,7 @@ body {
 .recipeCards > div {
   display: flex;
   flex-direction: column;
-  background-color: #000000;
+  background-color: #ffffff;
   /* width: 100px;
   height: 100px; */
   padding: 20px;
@@ -95,6 +102,7 @@ body {
 }
 .cardText {
   align-content:  left;
+  
 }
 
 h2 {

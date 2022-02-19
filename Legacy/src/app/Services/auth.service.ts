@@ -4,10 +4,10 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { User } from '../models/user';
 
-const AUTH_API = 'http://localhost:8080/api/auth/';
+const AUTH_API = 'http://localhost:3000/users/';
 // Make sure url path is correct
 
-const AUTH_API2 = 'http://localhost:3000/users'
+// const AUTH_API2 = 'http://localhost:3000/users'
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
@@ -16,7 +16,8 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class AuthService {
-  constructor(private http: HttpClient) { }
+   AUTH_API2 = 'http://localhost:3000/users';
+ 
 
   login(username: string, password: string): Observable<any> {
     return this.http.post(AUTH_API + 'login', {
@@ -26,7 +27,7 @@ export class AuthService {
   }
 
   register(newuser: User): Observable <User> {
-    return this.http.post<User>(AUTH_API2 + '/signup', newuser);
+    return this.http.post<User>(this.AUTH_API2 + '/signup', newuser);
 
     // register(username: string, email: string, password: string): Observable<any> {
     //   return this.http.post(AUTH_API + 'sign-up', {
@@ -36,4 +37,9 @@ export class AuthService {
     //   }, httpOptions);
     
   }
+
+
+
+
+  constructor(private http: HttpClient) { }
 }

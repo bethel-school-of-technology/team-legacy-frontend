@@ -32,8 +32,13 @@
 
 
 .container{
+  padding-top: 30px;
   text-align: center;  
-  background: whitesmoke;
+  background: rgb(250, 106, 106);
+}
+
+.foodIcon{
+  margin-bottom: 30px;
 }
 
 button {
@@ -80,7 +85,7 @@ p {
 }
 
 #pantry-wrapper > div {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: 100%;
   /* padding-left: 60px; */
 }

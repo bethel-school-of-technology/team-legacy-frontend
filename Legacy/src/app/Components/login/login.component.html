@@ -14,9 +14,10 @@
           <input
             class="form-input"
             name="Username"
-            type="email"
+            type="text"
             placeholder="Username"
-          />
+            [(ngModel)]="user.username">
+          
         </div>
         <div class="form-container">
           <label for="Password"></label>
@@ -25,11 +26,13 @@
             name="Password"
             type="password"
             placeholder="Password"
+            [(ngModel)]="user.password"
           />
         </div>
         <div class="flex-button">
           <button type="button" class="form-button" (click)="goToRecipes()">
-            Login
+            LOGIN
+
           </button>
           <br />
           <br />
@@ -41,7 +44,7 @@
             class="clickHere"
             style="color: whitesmoke"
             href="http://localhost:4200/sign-up"
-            >click here.</a
+            >Click here.</a
           >
           <!-- <button type="text" class="form-button" (click)="goToSignUp()"> here.</button> -->
         </div>
