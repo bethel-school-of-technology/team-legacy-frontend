@@ -7,7 +7,7 @@ import { PantryComponent } from './Components/pantry/pantry.component';
 import { PreferencesComponent } from './Components/preferences/preferences.component';
 import { RecipesComponent } from './Components/recipes/recipes.component';
 import { SignUpComponent } from './Components/sign-up/sign-up.component';
-import { CanActivate } from '@angular/router';
+// import { CanActivate } from '@angular/router';
 import { AuthGuardService as AuthGuard } from './Services/auth-guard.service';
 import { CannedGoodsComponent } from './FGC/canned-goods/canned-goods.component';
 import { CondimentsComponent } from './FGC/condiments/condiments.component';
@@ -49,7 +49,8 @@ component: NavBarComponent
 },
 {
   path:'sign-up',
-  component:SignUpComponent
+  component:SignUpComponent,
+  // canActivate: [AuthGuard]
 },
 {
   path: 'canned-goods',

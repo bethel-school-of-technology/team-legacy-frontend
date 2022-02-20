@@ -21,7 +21,7 @@ import { CannedGoodsComponent } from './FGC/canned-goods/canned-goods.component'
 import { CondimentsComponent } from './FGC/condiments/condiments.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
-
+import { JwtHelperService, JWT_OPTIONS  } from '@auth0/angular-jwt';
 import { HttpClientModule } from '@angular/common/http';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 // import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -57,7 +57,8 @@ import { FilterPipe } from './filter.pipe';
     // NgbModule,
     IvyCarouselModule
   ],
-  providers: [],
+  providers: [ { provide: JWT_OPTIONS, useValue: JWT_OPTIONS },
+    JwtHelperService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
