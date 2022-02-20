@@ -8,7 +8,6 @@ import { SignUpComponent } from '../Components/sign-up/sign-up.component';
 import { LandingComponent } from '../Components/landing/landing.component';
 import { PantryComponent } from '../Components/pantry/pantry.component';
 
-
 @NgModule({
   declarations: [
     // ResetPasswordComponent,
@@ -18,12 +17,14 @@ import { PantryComponent } from '../Components/pantry/pantry.component';
     CommonModule,
     AuthRoutingModule
   ],
+  
   exports: [
     // ResetPasswordComponent,
     LoginComponent,
     SignUpComponent,
     LandingComponent,
     PantryComponent
-  ]
+  
+  ],
 })
-export class AuthModule { }
+export class AuthModule {}

@@ -41,6 +41,10 @@ const routes: Routes = [
 // { path: '**', redirectTo: '' },
 
 {
+path: 'nav-bar',
+component: NavBarComponent
+},
+{
   path: 'canned-goods',
   component: CannedGoodsComponent,
   // canActivate:  [AuthGuard]
@@ -75,10 +79,10 @@ const routes: Routes = [
   component: SpicesComponent,
   // canActivate: [AuthGuard]
 },
-{
-  path: 'nav-bar',
-  component: NavBarComponent
-},
+// {
+//   path: 'nav-bar',
+//   component: NavBarComponent
+// },
 {
   path: 'pantry',
   component: PantryComponent,
