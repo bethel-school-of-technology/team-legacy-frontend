@@ -16,33 +16,43 @@ import { Ingredient } from 'src/app/Models/Ingredients';
   styleUrls: ['./canned-goods.component.css']
 })
 export class CannedGoodsComponent implements OnInit {
-
-  ingredient: Ingredient = new Ingredient
+  selectedIngredient?: Ingredient;
+  // ingredients: Ingredient[] = new [];
+  ingredients: Ingredient = new Ingredient
   counterValue = 0;
-   id : number=0;
- 
-  constructor(private router: Router, 
-    private ingFormService: IngFormService, 
+  id: number = 0;
+  addNewIngredient: any;
+
+  constructor(private router: Router,
+    private ingFormService: IngFormService,
     private http: HttpClient) { }
 
   ngOnInit(): void {
-  //  this.getIngredient();
-}
+    //  this.getIngredient();
+  }
 
-  
+
 
   getIngredient = (id: number) => {
     // this.ingFormService.getIngredient().subscribe(response => this.ingredient = response);
   }
 
+
   back() {
     this.router.navigate(['./pantry.component.html']);
-    this.ingFormService.addNewIngredient(this.ingredient).subscribe(
-      response => { alert("Great! ALL done here."); }
-    )
   }
 
+
+  onSelect(id: number, ingredient: string, ingredients: Ingredient){
+    this.addNewIngredient.selectedIngredient = ingredient;
+    this.ingFormService.addNewIngredient(this.ingredients).subscribe(
+      response => { alert("Great! ALL done here."); console.log(ingredient) }
+    )
+  };
+
 }
+
+
 
 // **** Functionality for QTY selector (Backlog)***
   // *****Optional*****

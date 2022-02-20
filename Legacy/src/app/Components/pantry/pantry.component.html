@@ -14,6 +14,16 @@
                 - Data bind with array in service or model ID #s for FGC selection lists -->
 <h1 class="pantry">Pantry</h1>
 
+<<<<<<< HEAD
+  <h1 class="pantry">Pantry</h1>
+  <!-- 
+  <div class="Search">
+    <input class="Lookup" type="search" [(ngModel)]="searchText" aria-label="search" placeholder="Search">
+    <ul *ngFor="let user of usersArray | filter: searchText">
+      <li>{{user}}</li>
+    </ul>
+  </div> -->
+=======
 <div id="pantry-buttons">
   <button class="getCookin" onclick="goToRecipes()">Lets Get Cookin!</button>
   <input
@@ -22,9 +32,68 @@
   aria-label="search"
   placeholder="Search for ingredients"
 />
+>>>>>>> master
 
 </div>
 
+<<<<<<< HEAD
+  <div class="row">
+    <div class="column">
+      <a routerLink="/protien"><button type="button"><img src="assets/protien.png" height="20"
+            width="20" /></button></a>
+      <p>Protien</p>
+    </div>
+    <div class="column">
+      <a routerLink="/dairy"><button type="button"><img src="assets/milk.png" height="20" 
+        width="20" /></button></a>
+      <p>Dairy</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <a routerLink="/vegetables"><button type="button"><img src="assets/vegetables.png" height="20"
+            width="20" /></button></a>
+      <p>Vegetables</p>
+    </div>
+  <div>
+    <div class="column">
+      <a routerLink="/fruits"><button type="button"><img src="assets/fruit.png" height="20" 
+        width="20" /></button></a>
+      <p>Fruits</p>
+    </div>
+  </div> 
+  <div class="row">
+    <div>
+      <a routerLink="/grains"><button type="button"><img src="assets/wheat-sack.png" height="20"
+            width="20"></button></a>
+      <p>Grains</p>
+    </div>
+    <div class="column">
+      <a routerLink="/canned-goods"><button type="button"><img src="assets/canned-food.png" height="20"
+            width="20"></button></a>
+      <p>Canned Goods</p>
+    </div>
+  </div>
+  </div>
+
+  <div class="row">
+    <div class="column">
+     <a routerLink="/spices"><button type="button"><img src="assets/spice.png" height="20" 
+      width="20" /></button></a>
+      <p>Spices</p>
+    </div>
+    <div class="column">
+     <a routerLink="/condiments"><button type="button"><img src="assets/condiments.png" height="20"
+          width="20" /></button></a>
+      <p>Condiments</p>
+    </div>
+  </div>
+  <a routerLink="/recipes"><button>Lets Get Cookin!</button></a>
+
+</form>
+<router-outlet></router-outlet>
+=======
 
 <section id="pantry-wrapper" class="container">
 
@@ -91,3 +160,4 @@
   </div>
 </section> 
 
+>>>>>>> master

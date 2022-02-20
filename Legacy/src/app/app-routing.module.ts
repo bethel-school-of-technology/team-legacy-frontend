@@ -7,7 +7,7 @@ import { PantryComponent } from './Components/pantry/pantry.component';
 import { PreferencesComponent } from './Components/preferences/preferences.component';
 import { RecipesComponent } from './Components/recipes/recipes.component';
 import { SignUpComponent } from './Components/sign-up/sign-up.component';
-import { CanActivate } from '@angular/router';
+// import { Router, CanActivate } from '@angular/router';
 import { AuthGuardService as AuthGuard } from './Services/auth-guard.service';
 import { CannedGoodsComponent } from './FGC/canned-goods/canned-goods.component';
 import { CondimentsComponent } from './FGC/condiments/condiments.component';
@@ -16,76 +16,89 @@ import { FruitsComponent } from './FGC/fruits/fruits.component';
 import { GrainsComponent } from './FGC/grains/grains.component';
 import { ProtienComponent } from './FGC/protien/protien.component';
 import { SpicesComponent } from './FGC/spices/spices.component';
-
-const routes: Routes = [{
-
+// import { Router } from '@angular/router';
+// import { AuthService } from './Services/auth.service';
+// import { AuthGuardService } from './Services/auth-guard.service';
+const routes: Routes = [
+  {
+    path: '', 
+    redirectTo: 'landingPage',
+    pathMatch: 'full'
+  },
+{
   path: 'landing',
   component: LandingComponent
 },
 
 {
   path: 'login',
-component: LoginComponent
+  component: LoginComponent
 },
+{
+  path: 'sign-up',
+  component: SignUpComponent
+},
+// { path: '**', redirectTo: '' },
+
 {
 path: 'nav-bar',
 component: NavBarComponent
 },
 {
-  path:'pantry',
-  component:PantryComponent,
+  path: 'canned-goods',
+  component: CannedGoodsComponent,
+  // canActivate:  [AuthGuard]
+},
+{
+  path: 'condiments',
+  component: CondimentsComponent,
   // canActivate: [AuthGuard]
 },
 {
-  path:'preferences',
+  path: 'dairy',
+  component: DairyComponent,
+  // canActivate: [AuthGuard]
+},
+{
+  path: 'fruits',
+  component: FruitsComponent,
+  // canActivate: [AuthGuard]
+},
+{
+  path: 'grains',
+  component: GrainsComponent,
+  // canActivate: [AuthGuard]
+},
+{
+  path: 'protien',
+  component: ProtienComponent,
+  // canActivate: [AuthGuard]
+},
+{
+  path: 'spices',
+  component: SpicesComponent,
+  // canActivate: [AuthGuard]
+},
+// {
+//   path: 'nav-bar',
+//   component: NavBarComponent
+// },
+{
+  path: 'pantry',
+  component: PantryComponent,
+  // canActivate: [AuthGuard]
+},
+{
+  path: 'preferences',
   component: PreferencesComponent,
   // canActivate: [AuthGuard]
-  
+
 },
 {
-  path:'recipes',
-  component:RecipesComponent,
+  path: 'recipes',
+  component: RecipesComponent,
   // canActivate: [AuthGuard]
 },
-{
-  path:'sign-up',
-  component:SignUpComponent
-},
-{
-  path: 'canned-goods',
-component:CannedGoodsComponent,
-canActivate: [AuthGuard]
-},
-{
-  path:'condiments',
-  component:CondimentsComponent,
-  canActivate: [AuthGuard]
-},
-{
-  path:'dairy',
-  component:DairyComponent,
-  canActivate: [AuthGuard]
-},
-{
-  path:'fruits',
-  component:FruitsComponent,
-  canActivate: [AuthGuard]
-},
-{
-  path:'grains',
-  component:GrainsComponent,
-  canActivate: [AuthGuard]
-},
-{
-  path:'protien',
-  component:ProtienComponent,
-  canActivate: [AuthGuard]
-},
-{
-  path:'spices',
-  component:SpicesComponent,
-  canActivate: [AuthGuard]
-}
 
 ];
 

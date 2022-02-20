@@ -23,10 +23,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
-import {IvyCarouselModule} from 'angular-responsive-carousel';
+// import {IvyCarouselModule} from 'angular-responsive-carousel';
 // import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FilterPipe } from './filter.pipe';
-
+import { RouterModule } from '@angular/router';
+import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt';
+import { AuthGuardService } from './Services/auth-guard.service';
+import { IngFormService } from './Services/ing-form.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,10 +57,12 @@ import { FilterPipe } from './filter.pipe';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
+    RouterModule,
     // NgbModule,
-    IvyCarouselModule
+    // IvyCarouselModule
   ],
-  providers: [],
+  providers: [{ provide: JWT_OPTIONS, useValue: JWT_OPTIONS },
+    JwtHelperService, AuthGuardService, ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
