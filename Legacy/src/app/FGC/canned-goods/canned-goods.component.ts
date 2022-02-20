@@ -46,7 +46,7 @@ export class CannedGoodsComponent implements OnInit {
   onSelect(id: number, ingredient: string, ingredients: Ingredient){
     this.addNewIngredient.selectedIngredient = ingredient;
     this.ingFormService.addNewIngredient(this.ingredients).subscribe(
-      response => { alert("Great! ALL done here."); }
+      response => { alert("Great! ALL done here."); console.log(ingredient) }
     )
   };
 
