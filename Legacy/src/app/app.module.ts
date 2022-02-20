@@ -24,7 +24,10 @@ import { FormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FilterPipe } from './filter.pipe';
-
+import { RouterModule } from '@angular/router';
+import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt';
+import { AuthGuardService } from './Services/auth-guard.service';
+import { IngFormService } from './Services/ing-form.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,9 +54,11 @@ import { FilterPipe } from './filter.pipe';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
-  providers: [],
+  providers: [{ provide: JWT_OPTIONS, useValue: JWT_OPTIONS },
+    JwtHelperService, AuthGuardService, ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

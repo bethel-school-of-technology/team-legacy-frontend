@@ -1,7 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { TouchSequence } from 'selenium-webdriver';
+import { CannedGoodsComponent } from 'src/app/FGC/canned-goods/canned-goods.component';
+import { AuthService } from 'src/app/Services/auth.service';
+// import { TouchSequence } from 'selenium-webdriver';
 // import { Url } from 'url';
 
 @Component({
@@ -13,7 +15,7 @@ export class PantryComponent implements OnInit {
   // router: any;
   // url: string = '';
   // usersArray: Array = [];
-  constructor(private http: HttpClient, private router: Router) { 
+  constructor(private http: HttpClient, private router: Router, private authService: AuthService) { 
     // this.http.getAllTasks().subscribe((data: ))
     
     // this.http.get(this.url).subscribe(data => {
@@ -33,9 +35,9 @@ export class PantryComponent implements OnInit {
   //     return this.http.get<Task[]>(URI);
   //   }
 
-  goToCannedGoods() {
-    this.router.navigate(['./canned-goods.component.html']);
-  }
+  // goToCannedGoods() {
+  //   this.router.navigate(['./canned-goods']);
+  // }
   goToCondiments() {
     this.router.navigate(['./condiments.component.html']);
   }

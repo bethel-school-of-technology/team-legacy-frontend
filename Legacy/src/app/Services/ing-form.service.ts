@@ -3,16 +3,16 @@ import { Injectable } from '@angular/core';
 // import { count } from 'console';
 import { Observable } from 'rxjs';
 import { Ingredient } from '../Models/Ingredients';
-
+// import { ING } from '../Models/Ingredients';
 @Injectable({
   providedIn: 'root'
 })
 export class IngFormService {
  url: string = "http://localhost:3000/ingredients";
-//  ingredient: Ingredient[] = new [];
-//  count: number = 0;
 
-constructor(private http: HttpClient) { }
+//  count: number = 0;
+// ingredients = ING;
+constructor(private http: HttpClient, ) { }
 
  addNewIngredient(ingredient:Ingredient): Observable<Ingredient>{
   return this.http.post<Ingredient>(this.url, ingredient);
