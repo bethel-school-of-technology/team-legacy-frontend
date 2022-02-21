@@ -9,21 +9,29 @@ import { Ingredient } from 'src/app/Models/Ingredients';
   styleUrls: ['./vegetables.component.css']
 })
 export class VegetablesComponent implements OnInit {
-  ingredients: Ingredient = new Ingredient;
+  ingredients: Ingredient = new Ingredient
+  counterValue = 0;
+  id: number = 0;
   addNewIngredient: any;
 
-  constructor(private router:Router, private http: HttpClient, private ingFormService:IngFormService) { }
+  constructor(
+    private router: Router,
+    private ingFormService: IngFormService,
+    private http: HttpClient) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    //  this.getIngredient();
+  }
+
   back() {
-    this.router.navigate(['./pantry.component.html']);
+    this.router.navigate(['pantry']);
   }
 
 
-  onSelect(id: number, ingredient: string, ingredients: Ingredient){
-    this.addNewIngredient.selectedIngredient = ingredient;
+  onSelect(){
+    // this.addNewIngredient.selectedIngredient = this.ingredients;
     this.ingFormService.addNewIngredient(this.ingredients).subscribe(
-      response => { alert("Great! ALL done here."); }
+      response => { alert("Great! ALL done here."); console.log(this.ingredients) }
     )
   };
 }

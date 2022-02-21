@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 // import { count } from 'console';
 import { Observable } from 'rxjs';
 import { Ingredient } from '../Models/Ingredients';
+import { Router } from '@angular/router';
 // import { ING } from '../Models/Ingredients';
 @Injectable({
   providedIn: 'root'
@@ -10,20 +11,27 @@ import { Ingredient } from '../Models/Ingredients';
 export class IngFormService {
  url: string = "http://localhost:3000/ingredients";
 
+
 //  count: number = 0;
 // ingredients = ING;
-constructor(private http: HttpClient, ) { }
+constructor(
+  private http: HttpClient,
+  private router: Router,
+  private ingredientModel:Ingredient) { }
 
  addNewIngredient(ingredient:Ingredient): Observable<Ingredient>{
   return this.http.post<Ingredient>(this.url, ingredient);
 }
-// ***  Function to get ingredient the user inputs and render it in the DOM on the same page(Need to be able to delete it)***
-getIngredient(id: number):Observable<Ingredient>{ 
-  
-  return this.http.get<Ingredient>(`${this.url}/${id}`);
-}
 
-}
+// onSelect( ingredients: Ingredient, addedIngredients: Ingredient[], id: number){
+//   for (let i : number = 0 ; i < addedIngredients.length ; i++){
+//    if(addedIngredients[i].ingredient.id === ingredients.ingredient.id){
+//      return this.http.post<Ingredient>(this.url, ingredients);
+//    }
+   
+  }
+
+
 
 
 
@@ -34,10 +42,7 @@ getIngredient(id: number):Observable<Ingredient>{
 
 
 
-// // quantity( ingredient: Ingredient, addedIngredients: Ingredient[]){
-// for (let i : number = 0 ; i < addedIngredients.length ; i++){
-//  if(addedIngredients[i].ingredient.id === ingredient.ingredient.id)
-// }
+
 
 
 //] angular.module('counterApp', []);

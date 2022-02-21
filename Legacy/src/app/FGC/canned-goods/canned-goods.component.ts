@@ -16,14 +16,15 @@ import { Ingredient } from 'src/app/Models/Ingredients';
   styleUrls: ['./canned-goods.component.css']
 })
 export class CannedGoodsComponent implements OnInit {
-  selectedIngredient?: Ingredient;
+  // selectedIngredient?: Ingredient;
   // ingredients: Ingredient[] = new [];
   ingredients: Ingredient = new Ingredient
   counterValue = 0;
   id: number = 0;
   addNewIngredient: any;
 
-  constructor(private router: Router,
+  constructor(
+    private router: Router,
     private ingFormService: IngFormService,
     private http: HttpClient) { }
 
@@ -31,26 +32,25 @@ export class CannedGoodsComponent implements OnInit {
     //  this.getIngredient();
   }
 
-
-
-  getIngredient = (id: number) => {
-    // this.ingFormService.getIngredient().subscribe(response => this.ingredient = response);
-  }
-
-
   back() {
-    this.router.navigate(['./pantry.component.html']);
+    this.router.navigate(['pantry']);
   }
 
 
-  onSelect(id: number, ingredient: string, ingredients: Ingredient){
-    this.addNewIngredient.selectedIngredient = ingredient;
+  onSelect(){
+    // this.addNewIngredient.selectedIngredient = this.ingredients;
     this.ingFormService.addNewIngredient(this.ingredients).subscribe(
-      response => { alert("Great! ALL done here."); console.log(ingredient) }
+      () => { alert("Great! ALL done here."); 
+      console.log(this.ingredients) }
+ 
     )
   };
+  
+   
 
 }
+
+
 
 
 
@@ -82,3 +82,9 @@ export class CannedGoodsComponent implements OnInit {
 // maxValue indicates the maximum number of items that can be selected in one go,
 // and disabled indicates whether the component should be disabled or not.
 // The setQuantityEvent is triggered when a quantity is selected.
+ 
+
+
+// getIngredient = (id: number) => {
+  //   // this.ingFormService.getIngredient().subscribe(response => this.ingredient = response);
+  // }

@@ -26,23 +26,17 @@ export class PantryComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // localStorage.setItem("ingerdient.id");
+  
   }
   
-  // Potential solution to json error
-  // public getAllTasks():Observable<Task[]> {  
-  //     let URI = `${this.serverApi}/tasks/`;
-  //     return this.http.get<Task[]>(URI);
-  //   }
-
-  // goToCannedGoods() {
-  //   this.router.navigate(['./canned-goods']);
-  // }
+  goToCannedGoods() {
+    this.router.navigate(['./canned-goods']);
+  }
   goToCondiments() {
     this.router.navigate(['./condiments.component.html']);
   }
   goToDairy() {
-    this.router.navigate(['./dairy.component.html']);
+    this.router.navigate(['dairy']);
   }
   goToFruits() {
     this.router.navigate(['./fruits.component.html']);
