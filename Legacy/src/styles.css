@@ -141,7 +141,10 @@ display: grid;
 .flex {
   /* align-items: center;
 text-align: center; */
+justify-content:center;
+display: grid;
 margin-right: 100%;
+padding-left: 10%;
   
 }
 
