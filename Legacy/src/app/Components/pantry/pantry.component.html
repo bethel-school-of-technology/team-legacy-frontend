@@ -12,152 +12,90 @@
                 - how to connect Angular login and sign up page to the back end
                 - how to connect Angular search bar to the back end
                 - Data bind with array in service or model ID #s for FGC selection lists -->
-<h1 class="pantry">Pantry</h1>
 
-<<<<<<< HEAD
-  <h1 class="pantry">Pantry</h1>
-  <!-- 
+
+
+<h1 class="primary-text">Pantry</h1>
+
+<!-- <<<<<<< HEAD -->
+  <!-- <h1 class="pantry">Pantry</h1>
+  
   <div class="Search">
     <input class="Lookup" type="search" [(ngModel)]="searchText" aria-label="search" placeholder="Search">
     <ul *ngFor="let user of usersArray | filter: searchText">
       <li>{{user}}</li>
     </ul>
   </div> -->
-=======
-<div id="pantry-buttons">
-  <button class="getCookin" onclick="goToRecipes()">Lets Get Cookin!</button>
-  <input
-  class="Lookup"
-  type="search"
-  aria-label="search"
-  placeholder="Search for ingredients"
-/>
->>>>>>> master
-
-</div>
-
-<<<<<<< HEAD
-  <div class="row">
-    <div class="column">
-      <a routerLink="/protien"><button type="button"><img src="assets/protien.png" height="20"
-            width="20" /></button></a>
-      <p>Protien</p>
-    </div>
-    <div class="column">
-      <a routerLink="/dairy"><button type="button"><img src="assets/milk.png" height="20" 
-        width="20" /></button></a>
-      <p>Dairy</p>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="column">
-      <a routerLink="/vegetables"><button type="button"><img src="assets/vegetables.png" height="20"
-            width="20" /></button></a>
-      <p>Vegetables</p>
-    </div>
-  <div>
-    <div class="column">
-      <a routerLink="/fruits"><button type="button"><img src="assets/fruit.png" height="20" 
-        width="20" /></button></a>
-      <p>Fruits</p>
-    </div>
-  </div> 
-  <div class="row">
-    <div>
-      <a routerLink="/grains"><button type="button"><img src="assets/wheat-sack.png" height="20"
-            width="20"></button></a>
-      <p>Grains</p>
-    </div>
-    <div class="column">
-      <a routerLink="/canned-goods"><button type="button"><img src="assets/canned-food.png" height="20"
-            width="20"></button></a>
-      <p>Canned Goods</p>
-    </div>
-  </div>
-  </div>
-
-  <div class="row">
-    <div class="column">
-     <a routerLink="/spices"><button type="button"><img src="assets/spice.png" height="20" 
-      width="20" /></button></a>
-      <p>Spices</p>
-    </div>
-    <div class="column">
-     <a routerLink="/condiments"><button type="button"><img src="assets/condiments.png" height="20"
-          width="20" /></button></a>
-      <p>Condiments</p>
-    </div>
-  </div>
-  <a routerLink="/recipes"><button>Lets Get Cookin!</button></a>
-
-</form>
-<router-outlet></router-outlet>
-=======
-
-<section id="pantry-wrapper" class="container">
-
-  <div class="column">
-    <button type="button" onclick="goToProtien()">
-      <img src="../../../assets/icons/protein.png" height="50" width="50" />
-    </button>
-    <p>Protien</p>
-  </div>
-  <div class="column">
-    <button type="button" onclick="goToDairy()">
-      <img src="../../../assets/icons/milk.png" height="50" width="50" />
-    </button>
-    <p>Dairy</p>
-  </div>
   
-
- 
-  <div class="column">
-    <button type="button" onclick="goToVegetables()">
-      <img class="foodIcon" src="../../../assets/icons/vegetables.png" height="50" width="50" />
-    </button>
-    <p>Vegetables</p>
-  </div>
-  <div class="column">
+  <<div id="pantry-buttons">
+    <!-- <button type="button" class="form-button btn-secondary btn:hover" >Search</button> -->
+    <input
+    class="Lookup"
+    type="search"
+    aria-label="search"
+    placeholder="Search for ingredients"/>
     
-      <button type="button" onclick="goToFruits()">
-        <img src="../../../assets/icons/fruit.png" height="50" width="50" />
-      </button>
     
-    <p>Fruits</p>
- 
-  </div>
-
-  
-  <div class="column">
-    <button type="button" onclick="goToGrains()">
-      <img src="../../../assets/icons/bread.png" height="50" width="50" />
-    </button>
-    <p>Grains</p>
-  </div>
-  <div class="column">
-    <button type="button" onclick="goToCannedGoods()">
-      <img src="../../../assets/icons/canned-food.png" height="50" width="50" />
-    </button>
-    <p>Canned Goods</p>
-  </div>
-  
-
-  
-  <div class="column">
-    <button type="button" onclick="goToSpices()">
-      <img src="../../../assets/icons/spice.png" height="50" width="50" />
-    </button>
-    <p>Spices</p>
-  </div>
-  <div class="column">
-    <button type="button" onclick="goToCondiments()">
-      <img src="../../../assets/icons/condiments.png" height="50" width="50" />
-    </button>
-    <p>Condiments</p>
     
- 
-  </div>
-</section> 
-
->>>>>>> master
+  </div> 
+  
+  
+  
+  <section id="pantry-wrapper" class="container">
+    
+    <div class="column">
+      <a routerLink="/protien"><button type="button"><img src="assets/protien.png" height="50"
+        width="50" /></button></a>
+        <p>Protien</p>
+      </div>
+      <div class="column">
+        <a routerLink="/dairy"><button type="button"><img src="assets/milk.png" height="50" 
+          width="50" /></button></a>
+          <p>Dairy</p>
+        </div>
+        
+        
+        
+        <div class="column">
+          <a routerLink="/vegetables"><button type="button"><img src="assets/vegetables.png" height="50"
+            width="50" /></button></a>
+            <p>Vegetables</p>
+          </div>
+          
+          <div class="column">
+            <a routerLink="/fruits"><button type="button"><img src="assets/fruit.png" height="50" 
+              width="50" /></button></a>
+              <p>Fruits</p>
+            </div>
+            
+            
+            <div>
+              <a routerLink="/grains"><button type="button"><img src="assets/wheat-sack.png" height="50"
+                width="50"></button></a>
+                <p>Grains</p>
+              </div>
+              <div class="column">
+                <a routerLink="/canned-goods"><button type="button"><img src="assets/canned-food.png" height="50"
+                  width="50"></button></a>
+                  <p>Canned Goods</p>
+                </div>
+                
+                
+                
+                
+                <div class="column">
+                  <a routerLink="/spices"><button type="button"><img src="assets/spice.png" height="50" 
+                    width="50" /></button></a>
+                    <p>Spices</p>
+                  </div>
+                  <div class="column">
+                    <a routerLink="/condiments"><button type="button"><img src="assets/condiments.png" height="50"
+                      width="50" /></button></a>
+                      <p>Condiments</p>
+                    </div>
+                  </section>
+                  
+                  <a routerLink="/recipes" class="cook" ><button>Lets Get Cooking!</button>  
+                  </a>
+                  
+                  <router-outlet></router-outlet>

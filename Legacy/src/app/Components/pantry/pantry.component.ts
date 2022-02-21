@@ -39,28 +39,28 @@ export class PantryComponent implements OnInit {
   //   this.router.navigate(['./canned-goods']);
   // }
   goToCondiments() {
-    this.router.navigate(['./condiments.component.html']);
+    this.router.navigate(['condiments']);
   }
   goToDairy() {
-    this.router.navigate(['./dairy.component.html']);
+    this.router.navigate(['dairy']);
   }
   goToFruits() {
-    this.router.navigate(['./fruits.component.html']);
+    this.router.navigate(['fruits']);
   }
   goToGrains() {
-    this.router.navigate(['./grains.component.html']);
+    this.router.navigate(['grains']);
   }
   goToProtien() {
-    this.router.navigate(['./protien.component.html']);
+    this.router.navigate(['protien']);
   }
   goToSpices() {
-    this.router.navigate(['./spices.component.html']);
+    this.router.navigate(['spices']);
   }
   goToVegetables() {
-    this.router.navigate(['./vegetables.component.html']);
+    this.router.navigate(['vegetables']);
   }
   goToRecipes() {
-    this.router.navigate(['./recipes.component.html'])
+    this.router.navigate(['recipes'])
     // Add functionality to submit array or selected items to Db
   }
 

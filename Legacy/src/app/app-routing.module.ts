@@ -16,6 +16,7 @@ import { FruitsComponent } from './FGC/fruits/fruits.component';
 import { GrainsComponent } from './FGC/grains/grains.component';
 import { ProtienComponent } from './FGC/protien/protien.component';
 import { SpicesComponent } from './FGC/spices/spices.component';
+import { VegetablesComponent } from './FGC/vegetables/vegetables.component';
 // import { Router } from '@angular/router';
 // import { AuthService } from './Services/auth.service';
 // import { AuthGuardService } from './Services/auth-guard.service';
@@ -83,6 +84,11 @@ component: NavBarComponent
 //   path: 'nav-bar',
 //   component: NavBarComponent
 // },
+{
+  path: 'vegetables',
+  component: VegetablesComponent,
+  // canActivate: [AuthGuard]
+},
 {
   path: 'pantry',
   component: PantryComponent,

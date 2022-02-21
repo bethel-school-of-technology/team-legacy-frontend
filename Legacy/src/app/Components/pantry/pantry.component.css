@@ -6,6 +6,7 @@
   padding-left: 0px;
   text-align: center;
   font-weight: 500;
+  color: whitesmoke;
 }
 
 .Lookup {
@@ -16,45 +17,54 @@
   min-width: 150px;
   height: 100%;
   margin-right: 16px;
+  margin-bottom: 50px;
   position: relative;
+  padding: 5px;
+  /* max-width: 50px; */
+  margin:auto
 }
 .column {
-  /* float: left; */
+  
   width: 50%;
-  /* padding: 10px; */
+  
   
 }
-/* .row:after {
-  content: "";
-  display: flex;
-  clear: both;
-} */
 
 
 .container{
   padding-top: 30px;
   text-align: center;  
-  background: rgb(250, 106, 106);
+  background: #00D1FF;
+  border-radius: 5%;
 }
 
 .foodIcon{
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 button {
+  margin-top: 30px;
   border-radius: 10%;
-  padding-top: 10px;
 }
+
+/* .cook{
+  text-align:;
+}
+  */
+
 
 p {
   text-align: center;
+  color: whitesmoke
 }
 
-.Lookup {
+/* .Lookup {
  
-  /* padding: ;/ */
-  max-width: 100px;
-}
+  
+  
+
+  
+} */
 
 /* .getCookin{
   text-align: center;
@@ -66,14 +76,17 @@ p {
 }
 
 #pantry-buttons {
-  width: 90%;
-  /* border: 1px solid black; */
+  width: 69.30%;
+  border: 1px solid black;
   margin: auto;
+  margin-bottom: 50px;
   display: flex;
   padding: 10px 0px 10px 0px;
+  /* background: darkgrey */
 }
 #pantry-buttons > button {
-  margin-right: 10px;
+  margin-right: 20px;
+ 
 }
 
 @media only screen and (max-width: 900px) {
@@ -89,8 +102,9 @@ p {
   width: 100%;
   /* padding-left: 60px; */
 }
-#pantry-wrapper > .column {
+#pantry-wrapper > .container > .column {
   align-content: center;
+  
 }
 
 #pantry-wrapper > .column > button {

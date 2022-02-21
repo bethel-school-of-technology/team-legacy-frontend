@@ -1,17 +1,27 @@
 <!-- [FormGroup] = foodsFormGroup -->
-<form>
-  <h2 style="text-decoration: underline; -ms-flex-align: center;">List your Dairy items.</h2>
- <tr><input type="text" placeholder="1"></tr> 
- <br>
- <tr><input type="text" placeholder="2" ></tr> 
- <br>
- <tr><input type="text" placeholder="3" ></tr> 
- <br>
- <tr><input type="text" placeholder="4" ></tr> 
- <br>
-
- <a routerLink="/pantry"><button (click)="back()">Back</button></a> 
-   <button (click)="onSelect">Add</button>
-
- 
+<h2>List your Dairy items</h2>
+<br />
+<br />
+<form class="FGCform">
+  <tr>
+    <input type="text" placeholder="1" />
+  </tr>
+  <br />
+  <tr>
+    <input type="text" placeholder="2" />
+  </tr>
+  <br />
+  <tr>
+    <input type="text" placeholder="3" />
+  </tr>
+  <br />
+  <tr>
+    <input type="text" placeholder="4" />
+  </tr>
+  <br />
+  <br />
+  <br />
+  <button type="button" (click)="back()">Back</button>
+  
+  <button type="button" (click)="onSelect()">Add</button>
 </form>

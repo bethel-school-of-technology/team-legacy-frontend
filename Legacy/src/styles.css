@@ -4,17 +4,30 @@ html, body, app-root {
   
 }
 
+/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: "Montserrat";
+  line-height: 5%;
+  /* background: linear-gradient(90deg, #B92B27 0%, #1565C0 100%); */
+  
+  background: linear-gradient(180deg, #000000 0%, #000000 100%);
+  box-sizing: border-box;
+  height: max-content;
+  align-content: center;
+  
+  /* background-color: rgb(244, 222, 102); */
+}
 /* ************************Navigation Bar********************** */
 
 
 
 div{
   padding-top: 1.5%;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 
 .links{
-padding-left: 40px;
+padding-left: 10px;
 padding-bottom: 1.5%;
 font-size: 30px;
 }
@@ -67,19 +80,6 @@ a{
   font-family:  href='//fonts.googleapis.com/css?family=Montserrat:thin,extra-light,light,100,200,300,400,500,600,700,800' ;
 }
 
-/* You can add global styles to this file, and also import other style files */
-body {
-  font-family: "Montserrat";
-  line-height: 5%;
-  /* background: linear-gradient(90deg, #B92B27 0%, #1565C0 100%); */
-  
-  background: linear-gradient(180deg, #ffffff 0%, #000000 100%);
-  box-sizing: border-box;
-  height: max-content;
-  align-content: center;
-  
-  /* background-color: rgb(244, 222, 102); */
-}
 
 .w100 {
   font-weight: 100;
@@ -89,7 +89,7 @@ body {
 .recipeCards > div {
   display: flex;
   flex-direction: column;
-  background-color: #ffffff;
+  background-color: #00D1FF;
   /* width: 100px;
   height: 100px; */
   padding: 20px;
@@ -104,23 +104,59 @@ body {
   align-content:  left;
   
 }
+h1{
+  color: whitesmoke;
+}
 
 h2 {
   text-align: center;
+  color: whitesmoke;
+}
+
+h3{
+  color:whitesmoke
 }
 
 a{
-  color: black;
+  color: whitesmoke;
 }
 .primary-text {
   padding-top: 1.5%;
   font-size: 40px;
   text-align: center;
-  color: black;
+  color: whitesmoke;
   font-weight: bold;
 }
 
+form 
+{
+  /* align-items: center;
+text-align: center;
+margin-left: 50%; */
+display: grid;
+  justify-content: center;
+  align-items: center;
+}
 
+.flex {
+  /* align-items: center;
+text-align: center; */
+margin-right: 100%;
+  
+}
+
+.cook{
+  display: grid;
+justify-content: center;
+}
+
+form >  tr {
+  margin-left: 15px;
+}
+
+form > button {
+  margin-left: 15px;
+}
 /* ***************Footer*************** */
 
 /* .footer-container {
